@@ -6,7 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5/tf5server"
 	"github.com/hashicorp/terraform-plugin-mux/tf5muxserver"
-	"github.com/iwarapter/terraform-provider-jwks/internal/sdkv2provider"
+	"github.com/jlmwork/terraform-provider-jwks/internal/sdkv2provider"
 )
 
 //go:generate terraform fmt -recursive ./examples/
@@ -22,7 +22,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	err = tf5server.Serve("registry.terraform.io/iwarapter/jwks", muxServer.ProviderServer)
+	err = tf5server.Serve("registry.terraform.io/jlmwork/jwks", muxServer.ProviderServer)
 	if err != nil {
 		panic(err)
 	}
